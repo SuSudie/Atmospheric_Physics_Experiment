@@ -80,17 +80,17 @@ bowen_1 = [Hc_1[i]/LE_wpl_1[i] for i in range(len(Hc_1))]
 bowen_8 = [Hc_8[i]/LE_wpl_8[i] for i in range(len(Hc_8))]
 
 #画图
-x_axis_data = time_s
-y_axis_data = bowen_8
-plt.rc('font',family='Times New Roman')
-plt.figure(figsize = [17,8])
+x_axis_data = time_s # x轴数据
+y_axis_data = bowen_8 # y轴数据
+plt.rc('font',family='Times New Roman') # 设置字体
+plt.figure(figsize = [17,8]) # 设置画布大小
 plt.plot(x_axis_data, y_axis_data, alpha=0.8, linewidth=3)
-plt.tick_params(labelsize=23)
-plt.title('Bowen  Ratio  of  2015-08-01',fontsize = 27)
-# plt.ylabel('W/m^2',fontsize = 23)
-plt.xlabel('time',fontsize = 23)
-plt.grid(b = True, linestyle='--', linewidth=1)
-# plt.ylim(2.6,3.2)
-x_major_locator = MultipleLocator(6)
+plt.tick_params(labelsize=23) # 设置坐标轴字体大小
+plt.title('Bowen  Ratio  of  2015-08-01',fontsize = 27) #设置标题
+# plt.ylabel('W/m^2',fontsize = 23) #设置y轴单位与字体大小
+plt.xlabel('time',fontsize = 23) #设置x轴单位与字体大小
+plt.grid(b = True, linestyle='--', linewidth=1) #设置背景网格
+# plt.ylim(2.6,3.2) #设置y轴范围
+x_major_locator = MultipleLocator(6) #设置x轴坐标间距
 ax = plt.gca()
 ax.xaxis.set_major_locator(x_major_locator)
